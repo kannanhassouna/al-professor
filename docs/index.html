@@ -8,25 +8,57 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script>
+         function init(){ 
+
+              // handle responsiveness
+         if (window.innerWidth <= 980) {
+            document.body.classList.add("is-mobile");
+         }
+         window.addEventListener("resize", () => {
+         console.log("resizing ");
+         console.log(window.innerWidth);
+         if (window.innerWidth <= 980) {
+            document.body.classList.add("is-mobile");
+         } else {
+            document.body.classList.remove("is-mobile");
+         }
+         });
+         document.body.style.display = 'block';
+         }
+
+         window.pre = function () {
+         //hide the preloader
+         setTimeout(function () {
+            hint.style.display = "none";
+         }, 700);
+
+       
+         };
+
+       
+         document.addEventListener('DOMContentLoaded', init)
+      </script>
       <title>  البروفيسور </title>
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/mobile.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/all.min.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/line-awesome.min.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/fontawesome.min.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/bootstrap.min.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/bootstrap-rtl.min.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/fonts.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/animate.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/style.css" />
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="site-assets/css/responsive.css" />
+      <link rel="stylesheet" href="site-assets/css/mobile.css" />
+      <link rel="stylesheet" href="site-assets/css/all.min.css" />
+      <link rel="stylesheet" href="site-assets/css/line-awesome.min.css" />
+      <link rel="stylesheet" href="site-assets/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="site-assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="site-assets/css/bootstrap-rtl.min.css" />
+      <link rel="stylesheet" href="site-assets/css/fonts.css" />
+      <link rel="stylesheet" href="site-assets/css/animate.css" />
+      <link rel="stylesheet" href="site-assets/css/style.css" />
+      <link rel="stylesheet" href="site-assets/css/responsive.css" />
       <link rel="icon" type="image/x-icon" href="site-assets/images/favicon.ico">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">      <script src="../cdnjs.cloudflare.com/polyfill/v3/polyfill.min1162.js?features=es6"></script>
       <script id="MathJax-script" async src="../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-mml-chtml.js"></script>
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="../cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.html">
-      <link rel="preload" as="style" onload="this.rel='stylesheet'" href="../cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+      <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.html">
+      <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
       <script src="../cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+      
      </head>
-   <body>
+   <body style="display: none;">
       <!-- preloader -->
       <div class="preloader">
          <div class="progress">
@@ -727,6 +759,11 @@
          });
        </script>
      </body>
+     <script>
+      window.addEventListener('load', function () {
+          document.body.style.visibility = 'visible';
+      });
+  </script>
 
 <!-- Mirrored from al-professor.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 10:49:23 GMT -->
 </html>

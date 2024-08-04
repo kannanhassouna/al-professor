@@ -5,6 +5,9 @@
 * Browsers: last 4 version
 */
 
+.is-mobile { 
+  display: block;
+}
 .is-mobile d-none {
   display: none;
 }
